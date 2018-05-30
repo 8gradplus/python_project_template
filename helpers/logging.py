@@ -50,11 +50,11 @@ def on_enter(logger):
 
 
 def on_exit(logger):
-    return OnExit(lambda r: logger.info("End computation " + str(r)))
+    return OnExit(lambda r: logger.info("End computation of function with result {result} ".format(result=str(r))))
 
 
 def on_exception(logger):
-    return OnException(lambda e: logger.error("An exception has occured " + str(e)))
+    return OnException(lambda e: logger.error("An exception has occured: {exception} ".format(exception=str(e))))
 
 
 
