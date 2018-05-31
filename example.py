@@ -14,13 +14,16 @@ logger.setLevel(logging.INFO)
 @on_exit(logger)
 @on_enter(logger)
 def divide(n: int):
+    """This is a really stupid example
+    - type and value should be checked instead of logged."""
     return 1/n
 
 
 if __name__ == "__main__":
 
-    divide(n=10)
-    divide(n=0)
+    # Example for logging
+    divide(n=10) # no exception
+    divide(n=0) # exception
 
 
 
